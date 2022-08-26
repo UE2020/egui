@@ -535,7 +535,7 @@ impl Painter {
                     1.0
                 };
                 let data: Vec<u8> = image
-                    .srgba_pixels(gamma)
+                    .linear_premultiplied_srgb_pixels()
                     .flat_map(|a| a.to_array())
                     .collect();
 
